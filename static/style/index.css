@@ -1,0 +1,79 @@
+:root {
+  /* Color */
+  --primary: #0374bf;
+  --primaryText: #FFFFFF;
+  --secondary: #f77c18;
+  --secondaryText: #ffffff;
+  --background: #f3f3f3;
+  --card: #ffffff;
+  --backgroundText: #000000;
+  --cardText: #000000;
+  /* Text */
+  --title-size: 20px;
+  --subtitle-size: 12px;
+  --body-size: 14px;
+  --title-spacing: 0.075rem;
+  --subtitle-spacing: 0.00625rem;
+  --body-spacing: 0.015625rem;
+  /* Other */
+  --border-radius: 2.5px;
+}
+
+
+/* Basic */
+html {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--background);
+  color: var(--backgroundText);
+  font-size: var(--body-size);
+  font-family: 'Montserrat';
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+
+  font-family: 'Montserrat';
+}
+
+p {
+  font-size: var(--body-size);
+  letter-spacing: var(--body-spacing);
+  font-family: 'Montserrat';
+  margin: 0px;
+  padding: 0px;
+}
+
+/**
+ App.vue style
+**/
+
+/* navbar style */
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  /* background-color: #d3d3d3; */
+background: #ecebe3;
+}
+
+a {
+  color: #000;
+}
+
