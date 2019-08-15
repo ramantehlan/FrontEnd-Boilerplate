@@ -1,13 +1,20 @@
 <template>
 <div>
-    Hello World!
+  <router-view :to="routerView.to"/>
 </div>
 </template>
 
 <script>
-
+export default {
+  data: () => ({
+    allowMenu: false,
+     routerView: {
+                  name: 'Home',
+                  to: '/'
+                }
+  })
+}
 </script>
 
 <style scope>
-
 </style>

@@ -13,13 +13,11 @@ module.exports = (env, argv) => ({
   entry: './src/index.js',
   // Options related to how webpack emit results
   output: {
-    // The filename template for entry chunks
-    filename: './script/[name].bundle.js',
     // The traget directory for all output files
     // Must be an absolute path. (use the Node.js path moduel)
     path: path.resolve(__dirname, 'docs'),
-    // The url to the output directory resolved relative to the HTML page
-    publicPath: '/assets/'
+    // The filename template for entry chunks
+    filename: './script/[name].bundle.js'
   },
   // Configuration regarding modules
   module: {
