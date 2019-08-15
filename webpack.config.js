@@ -4,6 +4,9 @@ const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const TerserJSPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = (env, argv) => ({
   // Chosen mode tells webpack to use its built-in optimizations accordingly.
@@ -17,7 +20,7 @@ module.exports = (env, argv) => ({
     // Must be an absolute path. (use the Node.js path moduel)
     path: path.resolve(__dirname, 'docs'),
     // The filename template for entry chunks
-    filename: './script/[name].bundle.js'
+    filename: 'script/[name].[contentHash].bundle.js'
   },
   // Configuration regarding modules
   module: {
@@ -29,7 +32,7 @@ module.exports = (env, argv) => ({
       }, {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader'
         ],
         exclude: /\.module\.css$/
@@ -63,6 +66,10 @@ module.exports = (env, argv) => ({
       template: path.resolve(__dirname, 'static/index.html'),
       inject: true
     }),
+    new MiniCssExtractPlugin({
+      filename: 'style/[name].contentHash].css',
+      chunkFilename: 'style/[id].[contentHash].css'
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'static'),
       to: path.resolve(__dirname, 'docs'),
@@ -71,6 +78,7 @@ module.exports = (env, argv) => ({
   ],
 
   optimization: {
+    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserJSPlugin({})],
     splitChunks: {
       chunks: 'all',
       minSize: 30000,

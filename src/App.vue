@@ -16,5 +16,5 @@ export default {
 }
 </script>
 
-<style scope>
+<style  src='@/style/index.css' scope>
 </style>
