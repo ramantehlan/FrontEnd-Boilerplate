@@ -1,7 +1,9 @@
 const path = require('path')
 
 const { VueLoaderPlugin } = require('vue-loader')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // Chosen mode tells webpack to use its built-in optimizations accordingly.
@@ -56,14 +58,21 @@ module.exports = {
   },
 
   plugins: [
+    // Delete the docs directory before each build, to remove old files.
+    new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'static/index.html'),
       inject: true
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'static'),
+      to: path.resolve(__dirname, 'docs'),
+      toType: 'dir'
+    }])
   ],
   devServer: {
-    compress: false,
+    compress: true,
     host: 'localhost',
     https: false,
     open: true,
