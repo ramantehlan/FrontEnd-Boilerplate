@@ -4,14 +4,14 @@
   --primaryText: #FFFFFF;
   --secondary: #f77c18;
   --secondaryText: #ffffff;
-  --background: #f3f3f3;
+  --background: #feff33;
   --card: #ffffff;
   --backgroundText: #000000;
   --cardText: #000000;
   /* Text */
   --title-size: 20px;
   --subtitle-size: 12px;
-  --body-size: 14px;
+  --body-size: 22px;
   --title-spacing: 0.075rem;
   --subtitle-spacing: 0.00625rem;
   --body-spacing: 0.015625rem;
@@ -60,20 +60,3 @@ p {
   margin: 0px;
   padding: 0px;
 }
-
-/**
- App.vue style
-**/
-
-/* navbar style */
-body {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  /* background-color: #d3d3d3; */
-background: #ecebe3;
-}
-
-a {
-  color: #000;
-}
-

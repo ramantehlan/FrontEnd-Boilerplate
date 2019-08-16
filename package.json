@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "mocha",
-    "dev": "webpack-dev-server --progress",
-    "build": "webpack -p --mode production"
+    "dev": "webpack-dev-server --config webpack.dev.js --open --progress",
+    "build": "webpack -p --config webpack.prod.js"
   },
   "repository": {
     "type": "git",

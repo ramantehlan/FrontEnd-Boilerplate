@@ -64,7 +64,12 @@ module.exports = (env, argv) => ({
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'static/index.html'),
-      inject: true
+      inject: true,
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true
+      }
     }),
     new MiniCssExtractPlugin({
       filename: 'style/[name].contentHash].css',
