@@ -23,7 +23,7 @@ I created it for personal use, but feel free to use it for your project or maybe
 
 ## Usage
 
-To use this Boilerpate, make sure you have all the pre-requisites and your development environment is ready. After that you can 
+To use this Boilerpate, make sure you have all the `pre-requisites` and your `development environment` is ready. After that you can read about the `file-structure`, which also explains about project struction and how things are working in background. Commands will tell you about the important `commands` you should know. 
 
 ### Pre-Requisites
 List all the pre-requisites the system needs to develop this project.
@@ -67,10 +67,11 @@ Write the development Instruction here.
  > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
 
 ##  Resources
-- https://webpack.js.org
-- https://www.npm-graph.com/
-- babel
-- Mocha
+- [Webpack](https://webpack.js.org)
+- [NPM Graph](https://www.npm-graph.com/)
+- [babel](https://babeljs.io/)
+- [Mocha](https://mochajs.org/)
+- [CI/CD Best Practices](https://www.digitalocean.com/community/tutorials/an-introduction-to-ci-cd-best-practices)
 
 ## Credit
 
