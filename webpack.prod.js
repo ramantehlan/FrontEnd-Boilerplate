@@ -30,10 +30,11 @@ module.exports = (env, argv) => ({
         test: /\.js$/,
         loader: 'babel-loader'
       }, {
-        test: /\.css$/,
+        test: /\.(c|sa|sc)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ],
         exclude: /\.module\.css$/
       }, {
@@ -107,13 +108,5 @@ module.exports = (env, argv) => ({
     removeAvailableModules: true,
     removeEmptyChunks: true,
     mergeDuplicateChunks: true
-  },
-  devServer: {
-    compress: true,
-    host: 'localhost',
-    https: false,
-    open: true,
-    overlay: true,
-    port: 8000
   }
 })

@@ -25,13 +25,15 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader'
       }, {
-        test: /\.css$/,
+        test: /\.(c|sa|sc)ss$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ],
         exclude: /\.module\.css$/
-      }, {
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
       }, {
@@ -61,7 +63,7 @@ module.exports = {
     })
   ],
   devServer: {
-    compress: true,
+    compress: false,
     host: 'localhost',
     https: false,
     open: true,
