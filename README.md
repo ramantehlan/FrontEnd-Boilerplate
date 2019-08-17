@@ -2,7 +2,8 @@
 
 A simple FrontEnd Boilerplate.
 
-![CircleCI](https://circleci.com/gh/ramantehlan/FrontEnd-Boilerplate.svg?style=svg)
+[![CircleCI](https://circleci.com/gh/ramantehlan/FrontEnd-Boilerplate.svg?style=svg)](https://circleci.com/gh/ramantehlan/FrontEnd-Boilerplate) 
+![License](https://img.shields.io/badge/License-GPL%20v3.0-yellowgreen)
 
 ## Index
 
@@ -13,6 +14,7 @@ A simple FrontEnd Boilerplate.
   - [File Structure](#file-structure)
   - [Commands](#build)  
 - [Contribution](#contribution) 
+  - [Branches](#branches)
 - [Resources](#resources)
 - [Credit/Acknowledgment](#creditacknowledgment)
 - [License](#license)
@@ -67,6 +69,29 @@ Write the development Instruction here.
  It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/ramantehlan/FrontEnd-Boilerplate/issues) and make a pull request.
 
  > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
+
+### Branches
+
+We are following agile continuous integration methodology, so the version is frequently updated and development is really fast.
+
+1. **`Master`** is the development branch.
+
+2. **`Production`** is the production branch.
+
+3. No other permanent branches should be created in the main repository, you can create feature branches but they should get merged with the master.
+
+**Steps to work with feature branch**
+
+1. To start working on a new feature, create a new branch prefixed with `feat` and followed by feature name. (ie. `feat-FEATURE-NAME`)
+2. Once you are done with your changes, you can raise PR.
+
+**Steps to create a pull request**
+
+1. Make a PR to `master` branch.
+2. Comply with the best practices and guidelines e.g. where the PR concerns visual elements it should have an image showing the effect.
+3. It must pass all continuous integration checks and get positive reviews.
+
+After this, changes will be merged.
 
 ##  Resources
 - [Webpack](https://webpack.js.org)
