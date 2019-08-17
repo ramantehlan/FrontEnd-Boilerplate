@@ -2,6 +2,8 @@
 
 A simple FrontEnd Boilerplate.
 
+[![CircleCI](https://circleci.com/gh/ramantehlan/FrontEnd-Boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/ramantehlan/FrontEnd-Boilerplate/tree/master)
+
 ## Index
 
 - [About](#about)
