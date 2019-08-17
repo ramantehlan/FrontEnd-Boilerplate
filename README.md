@@ -1,3 +1,5 @@
+![Frontend Boilerpate](https://user-images.githubusercontent.com/29037312/63212892-401ce980-c128-11e9-83ab-5f01b22426ee.png)
+
 # Frontend-Boilerplate
 
 A simple Frontend Boilerplate.
