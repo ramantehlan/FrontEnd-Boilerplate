@@ -1,6 +1,6 @@
 <template>
 <div>
-    Home
+    <div id='intro'>Frontend Boilerpate</div>
 </div>
 </template>
 
