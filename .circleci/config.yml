@@ -8,4 +8,4 @@ jobs:
       - run: | 
           npm install # Install dependencies
           npm test # Run Test
-          npm run build # Build the project
+          npm run build # Build the projecto 
