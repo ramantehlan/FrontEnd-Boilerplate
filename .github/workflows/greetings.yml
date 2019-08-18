@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/first-interaction@v1
       with:
-        repo-token: 'c55ed17329d8e7ec0fb40713abb2e098f66c97cc'
+        repo-token: c55ed17329d8e7ec0fb40713abb2e098f66c97cc
         issue-message: 'Whoa! Reporting issues is a crucial contribution to the development of any project, they help us find the bugs which slip away in the testing workflow. This is a small appreciation token on your first issue. Thank you for your contribution. :)'' first issue'
         pr-message: 'Yippee! Developers love PRs, they are a good sign for a project and also helps in the development of the project. This is your first PR and we hope it's not going to be your last. Thank you for taking time and interest in this project, we appreciate it. :)'' first pr'
