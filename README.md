@@ -44,9 +44,12 @@ Write about setting up the working environment for your project.
 
 ### File Structure
 
-| No | File Name | Details 
-|----|------------|-------|
-| 1  | index | Entry point
+ No | File/Folder Name        | Details 
+---|--------------------------|-------------------------------|
+ 1 | static/                  | Static files like images, third-party libraries, PWA manifest, and service worker are stored here.
+ 2 | src/                     | Contains un-built application source code.
+ 3 | test/                    | Tests for the program are stored here.
+ 4 | docs/                    | Webpack output the build here.
 
 ### Commands
 Important commands
