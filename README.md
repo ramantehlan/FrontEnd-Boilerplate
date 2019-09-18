@@ -15,6 +15,7 @@ A simple Frontend Boilerplate.
   - [Developmen Environment](#development-environment)
   - [File Structure](#file-structure)
   - [Commands](#build)  
+- [Development](#development)
 - [Contribution](#contribution) 
   - [Branches](#branches)
 - [Resources](#resources)
@@ -29,36 +30,106 @@ I created it for personal use, but feel free to use it for your project or maybe
 
 ## Usage
 
-To use this Boilerpate, make sure you have all the `pre-requisites` and your `development environment` is ready. After that you can read about the `file-structure`, which also explains about project struction and how things are working in background. Commands will tell you about the important `commands` you should know. 
+To use this Boilerpate, make sure you have all the `pre-requisites` and your `development environment` is ready. After that you can read about the `file-structure`, which also explains about project struction and how things are working in background. Commands will tell you about the important `commands` you should konow. 
 
 ### Pre-Requisites
-List all the pre-requisites the system needs to develop this project.
-- A tool
-- B tool
+
+In order to work on this project or to develop it, you need to have some pre-installed tools and knowledge about them. Below are the tools you need to install on your system:
+
+- NodeJs
+- NPM
 
 ### Development Environment
 
-Write about setting up the working environment for your project.
-- How to download the project...
-- How to install dependencies...
+Once you have all the requirements checked out, you can develop this project. You need to set up the development environment to work on it. Follow the steps given below to setup:
+
+1. Fork this repo.
+2. Clone the forked repo on your system. $ git clone https://github.com/YOUR_USERNAME/pydatadelhi.github.io
+3. We prefer you to work on different branched on your forked repo.
+4. Go inside the cloned folder, and install all the dependencies. $ npm install
+5. Now you can make your changes, to test them run the dev server. $ npm run dev
+
 
 ### File Structure
 
- No | File/Folder Name        | Details 
----|--------------------------|-------------------------------|
- 1 | static/                  | Static files like images, third-party libraries, PWA manifest, and service worker are stored here.
- 2 | src/                     | Contains un-built application source code.
- 3 | test/                    | Tests for the program are stored here.
- 4 | docs/                    | Webpack output the build here.
+ No | File/Folder name   | Details
+ ---|--------------------|--------
+ 1 	| ./docs 		     | Webpack output the build here, which is then hosted by github pages.
+ 2 	| ./src              | Contains un-built application source code.
+ 3 	| ./src/components   | Individual components view, styling, and logic that our application uses.
+ 3 	| ./src/style        | Style for the project.
+ 4 	| ./static           | Static files like images, third-party libraries, PWA manifest, and service worker are stored here.
+ 5  | ./node_modules/... | Auto installed node packages.
+ 6  | package.json       | NPM package file for this project.
+ 7  | package-lock.json  | NPM packages details.
+ 8  | webpack.dev.js     | Development configuration file for webpack.
+ 8  | webpack.prod.js    | Production configuration file for webpack.
+ 9  | LICENSE 		     | GNU General Public License v3.0
+ 11 | .gitignore         | To ignore files to be a part of version control.
+
 
 ### Commands
-Important commands
+
+- Running all the test.
+    ```
+    npm run test
+    ```
+- Starting development server.
+    ```
+    npm run dev
+    ```
 
 #### Build
-Write the build Instruction here.
+To build the project for production, you can use the following command. The output will be dumped in `/docs` folder which is used by the github pages to host the site.
 
-#### Development
-Write the development Instruction here.
+```
+$ npm run build
+```
+
+## Development
+
+#### Root files
+
+The root/entry file for the project can be found in the `./static` folder, it also consists of all the global files like index.css, plus its purpose is to store the static file like images etc. 
+
+#### **Working with .vue files.**
+
+In the folder `./src/components`, you will find most of the `.vue` files, they are the components for different pages, which you will understand from there name. Below is the basic structure of any `.vue` file. 
+
+``` vue
+<template>
+    HTML CODE...
+</template>
+
+<style scoped>
+    CSS SHEET...
+</style>
+
+<script>
+    JAVASCRIPT CODE...
+</script>
+```
+
+Here, `template` tag consist of all the HTML for that particular component, in our case page. `style` tag consists of all the CSS style and finally, `script` tag consists of all the javascript. To create a new component, you just have to add a `NEW-COMPONENT.vue` to components folder.
+
+#### **Adding a new route** 
+
+All the routers are defined in `./src/router.js` file. To add a new route, you must create a new component and import it to this file. 
+
+```
+...
+import Home from '@/components/NEW-COMPONENT-NAME'
+...
+export default new Router({
+  routes: [...
+    {
+      path: '/NEW-LOC',
+      name: 'NEW-COMPONENT-NAME',
+      component: NEW-COMPONENT-NAME
+    }
+...]})
+
+```
 
 ## Contribution
 
