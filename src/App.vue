@@ -7,7 +7,6 @@
 <script>
 export default {
   data: () => ({
-    allowMenu: false,
      routerView: {
                   name: 'Home',
                   to: '/'
