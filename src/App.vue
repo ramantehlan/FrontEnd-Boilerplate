@@ -1,7 +1,5 @@
 <template>
-<div>
   <router-view :to="routerView.to"/>
-</div>
 </template>
 
 <script>
