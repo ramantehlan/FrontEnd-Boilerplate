@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Page content
-import Home from '@/components/Home'
+import Home from '@/routes/home'
 
 // Fallback page
-import PageNotFound from '@/components/errorPages/404'
+import PageNotFound from '@/routes/errorPages/404'
 
 Vue.use(Router)
 
